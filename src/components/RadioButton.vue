@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 <template>
-  <div style="width: 100%; display: flex; justify-content: center;">
-    <div class="card" style="width: 40%;">
+  <div style="width: 100%; display: flex; justify-content: center">
+    <div class="card" style="width: 40%">
       <div class="row g-0">
         <div class="col-md-4">
           <div class="card-body">
@@ -82,7 +82,7 @@
                       :class="`btn btn-${x.split('|')[1]} button-${i}`"
                       :disabled="selectedChild !== item.value"
                     >
-                      {{ x.split('|')[2] }}
+                      {{ x.split("|")[2] }}
                     </button>
                   </div>
                 </div>
@@ -150,32 +150,31 @@
 </template>
 <script>
 export default {
-  name: 'RadioButton',
-  props: ['radios'],
+  name: "RadioButton",
+  props: ["radios"],
   data() {
     return {
       selectedParent: 0,
       selectedChild: 0,
-      inputValue: '',
-      dateValue: '',
-      textareaValue: '',
-    }
+      inputValue: "",
+      dateValue: "",
+      textareaValue: "",
+    };
   },
   computed: {
     getSubComponentItems() {
       if (this.selectedParent === 0) {
-        return []
+        return [];
       }
-      return this.radios.find((x) => x.value === this.selectedParent).children
+      return this.radios.find((x) => x.value === this.selectedParent).children;
     },
     getSelectedParentComponent() {
       if (this.selectedParent === 0) {
-        return ''
+        return "";
       }
-      return this.radios.find((x) => x.value === this.selectedParent).text
+      return this.radios.find((x) => x.value === this.selectedParent).text;
     },
-    getInputValue() {},
   },
-}
+};
 </script>
 <style></style>

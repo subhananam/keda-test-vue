@@ -19,7 +19,7 @@ describe("RadioButton.vue", () => {
 describe("RadioButton.vue", () => {
   it("Find Radio Input Text", () => {
     const wrapper = shallowMount(RadioButton);
-    expect(wrapper.find("#radio-parent-1").).toBeDefined();
+    expect(wrapper.find("#radio-parent-1")).toBeDefined();
   });
 });
 describe("RadioButton.vue", () => {
